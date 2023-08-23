@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Jost:300|Hepta+Slab:400");
+
+html {
+  font-size: 112.5%;
+} /*18px*/
+:root {
+  --color-primary1: #062240;
+  --color-primary2: #f1f1f1ed;
+  --color-secondary: #6b7246;
+  --color-secondary2: #0f0f0f;
+
+  --color-accent1: #ff5e4f;
+  --color-offwhite: #fffaff;
+  /* ------------------------------------------------- */
+  --font-displayfont: "Hepta Slab", serif;
+  --font-bodyfont: "Jost", sans-serif;
+}
+body {
+  background: #ffffff;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Hepta Slab", serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+small,
+.text_small {
+  font-size: 0.75rem;
+}
+#aboutme_text a {
+  color: var(--color-accent1);
+  text-decoration: none;
+}
+#aboutme_text a:visited {
+  text-decoration: none;
+}
+/* ----------------NAV--------------------------- */
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 77px;
+  background: var(--color-primary1);
+  padding: 0 48px;
+}
+nav > a:first-of-type {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-displayfont);
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: fit-content;
+}
+.lan {
+  font-size: 1rem;
+  color: var(--color-offwhite);
+  list-style: none;
+  margin-left: 3rem;
+}
+.lan ul {
+  list-style-type: none;
+}
+.lan a {
+  text-decoration: none;
+  color: var(--color-accent1);
+}
+.lan .link_off {
+  color: rgba(255, 250, 255, 0.5);
+}
+#end_of_nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+#nav_links #lan a {
+  font-size: 1rem;
+  color: var(--color-offwhite);
+}
+#nav_links {
+  display: flex;
+}
+
+#nav_links ul {
+  list-style-type: none;
+  display: inline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav_links ul li {
+  padding-left: 1.2rem;
+}
+#nav_links > ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+#nav_links a:hover,
+#footer_links > ul a:hover {
+  color: #f41600;
+}
+nav svg {
+  display: none;
+}
+
+.burgermenu {
+  display: none;
+}
+.burgermenu a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+/* --------------------------main-------------------------------------- */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem 0 0 48px;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 251, 248, 1) 0%,
+    rgba(247, 250, 248, 1) 39%,
+    rgba(217, 229, 225, 1) 56%,
+    rgba(207, 222, 215, 1) 80%,
+    rgba(209, 224, 217, 1) 100%
+  );
+}
+
+#aboutme_graphic {
+  grid-column: 2;
+  width: 100%;
+  padding: 0 5rem;
+  align-self: end;
+}
+
+figure,
+img {
+  width: 100%;
+}
+
+h5 {
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+#aboutme_text {
+  max-width: 40vw;
+}
+
+/* --------------Footer-------------------------------------- */
+footer {
+  height: 100px;
+  width: 100%;
+  background: var(--color-primary1);
+  display: flex;
+  justify-content: center;
+}
+#footer_content {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 48px;
+  flex-direction: row-reverse;
+}
+#footer_links {
+  align-self: center;
+}
+#footer_links > ul {
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 0.3rem;
+}
+#footer_links ul li {
+  padding-right: 0.6rem;
+}
+#footer_links ul li a {
+  color: var(--color-offwhite);
+  text-decoration: none;
+}
+#svgs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+#svgs svg {
+  fill: var(--color-offwhite);
+  padding-left: 0.6rem;
+}
+#footer_links svg {
+  fill: var(--color-offwhite);
+}
+#footer_links ul:last-of-type {
+  display: flex;
+  flex-direction: column;
+}
+#footer_links ul:last-of-type li {
+  display: flex;
+  color: var(--color-offwhite);
+}
+#footer_links ul:last-of-type li p:last-of-type {
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+#footer_links p {
+  margin: 0;
+}
+/* -------------------Media-queries-------------------- */
+@media (max-width: 1272px) {
+  #aboutme_graphic {
+    padding: 0;
+    align-self: start;
+  }
+}
+@media (max-width: 962px) {
+  #aboutme_graphic {
+    padding: 0;
+  }
+}
+
+@media (max-width: 784px) {
+  #nav_links ul {
+    display: none;
+  }
+  nav svg {
+    display: inline;
+    align-self: center;
+    fill: var(--color-offwhite);
+    cursor: pointer;
+    z-index: 2;
+    height: 25px;
+  }
+
+  .burgermenu {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary1);
+    transform: translate(150vw, 0);
+    justify-content: center;
+    padding-top: 8rem;
+    display: none;
+    position: fixed;
+  }
+  #nav_links .burgermenu ul {
+    display: inline;
+  }
+  #nav_links .burgermenu ul li {
+    font-size: 3.157rem;
+    margin-top: 1rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 66%,
+      rgba(210, 225, 218, 1) 85%,
+      rgba(210, 225, 218, 1) 100%
+    );
+  }
+  #aboutme_text {
+    max-width: max-content;
+  }
+  #aboutme_graphic {
+    padding: 0;
+  }
+  #aboutme_text h2 {
+    font-size: 2.157rem;
+  }
+  #aboutme_text h5 {
+    font-size: 1rem;
+  }
+  main {
+    padding: 5rem 24px;
+  }
+  #footer_content {
+    padding: 0 24px;
+  }
+  #svgs {
+    flex-direction: column;
+    margin: 0;
+  }
+  #nav_links ul li {
+    padding: 0;
+  }
+  #end_of_nav {
+    flex-direction: row;
+    justify-content: end;
+  }
+  .lan {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+}
+/* --------------------JS Class--------------------------- */
+
+.bgmenuWidth {
+  transform: translate(0vw, 0vw);
+  display: flex;
+  z-index: 1;
+}
+.nav_svg_fixed {
+  position: fixed;
+}
+.remove_display {
+  display: none;
+}
+
+/* --------------------Burgermenu animation------------------ */
+
+.lineOne {
+  transform: rotate(35deg) translate(-4px, 38.5px);
+  transform-origin: center center;
+  transition: 0.5s;
+}
+.lineTwo {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+.lineThree {
+  /* transform: rotate(-45deg) translate(-11px, -26px); */
+  transform: rotate(-35deg) translate(-5px, -28px);
+  transform-origin: center center;
+  transition: 0.5s;
+}
